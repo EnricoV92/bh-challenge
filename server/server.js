@@ -16,6 +16,7 @@ class Server {
 
     routes() {
         this.app.use(require('../routes/ownedProducts.routes'));
+        this.app.use(require('../routes/email.routes'));
     }
 
     listen() {
