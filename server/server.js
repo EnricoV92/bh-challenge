@@ -8,15 +8,17 @@ class Server {
     }
 
     middlewares() {
-
+        this.app.use(express.json());
     }
 
     routes() {
-
+        this.app.use(require('../routes/ownedProducts.routes'));
     }
 
     listen() {
-
+        this.app.listen(this.port, () => {
+            console.log('Server listening at port:', this.port);
+        })
     }
 }
 
